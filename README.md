@@ -38,7 +38,9 @@ Can handle any language, because it runs tests as child processes.
 <div> ✓ execute tests written in <b style="color:purple">any</b> language, use write TAP to stdout</div>
 <div> ✓ only <b style="color:purple">18mbs </b> on filesystem as npm install -D</div>
 <div> ✓ works with <b style="color:purple"> Selenium </b> (use selenium-webdriver, wd, or webdriver.io)</div>
-<div> ✓ Complete control => Everything in Suman is parallelizable, but you *can* run unit tests all in the same process for speed, as needed. </div>
+<div> ✓ Built-in watch features => Watch files, and run tests on changes </div>
+<div> ✓ Everything in Suman is parallelizable </div>
+<div> ✓ Complete control => You *can* run unit tests all in the same process for speed, as needed. </div>
 
 </p>
 
@@ -46,12 +48,13 @@ Can handle any language, because it runs tests as child processes.
 For more detailed feature explanations, see below.
 
 
----
+ ---
 
+# &#9658; Documentation 
 
-# &#9658; <ul> Documentation </ul>
+ ---
 
- >   Suman documentation => [sumanjs.org](http://sumanjs.github.io "Suman Docs")  
+ >   Suman docs => [sumanjs.org](http://sumanjs.github.io "Suman Docs")  
 
  ---
 
@@ -126,6 +129,15 @@ If you wish to avoid global NPM module installations, we commend you, see:
  [http://sumanjs.github.io/tutorial-11-advanced-installation.html/](http://sumanjs.github.io/tutorial-11-advanced-installation.html "Suman Docs: Advanced Installation") 
 
 
+## Example commands
+
+```bash 
+ suman test/src/*.spec.js --concurrency=12  # run the 45 matching tests, no more than 12 at a time.
+```
+
+```bash 
+ suman -w project   # run all the tests
+```
 
 ## The Suman Story
 
