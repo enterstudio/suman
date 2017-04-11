@@ -25,13 +25,11 @@ Can handle any language, because it runs tests as child processes.
 
 
 
+<p>
 
-
-<p >
-
-<div style="color:purple"> ✓ test isolation => by default, each test runs in its own process </div>
-<div style="color:purple"> ✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)</div>
-<div style="color:purple"> ✓ declarative style - declare (sync and async) dependencies for each test, and only load those</div>
+<div> <b style="color:purple"> ✓ test isolation => </b> by default, each test runs in its own process </div>
+<div> <b style="color:purple"> ✓ test independence => </b>  easily run only one test at a time (unlike other Node.js test runners...)</div>
+<div> <b style="color:purple"> ✓ declarative style </b>  - declare (sync and async) dependencies for each test, and only load those</div>
 <div> ✓ "nodeable test scripts" => run individual tests with the node.js executable</div>
 <div> ✓ no global variables as part of test harness</div>
 <div> ✓ supports unit testing in the browser (tested on Chrome and Firefox)</div>
