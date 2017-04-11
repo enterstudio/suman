@@ -16,13 +16,12 @@ Intended to work with Selenium, in the browser, and to do large-scale backend sy
 
 Can handle any language, because it runs tests as child processes. 
 
-
-#  => Suman is designed to be 'better all-around' than AVA, TapJS and Mocha
+## If your team is interested in speeding up your testing cycles, Suman is the absolute right place to look for answers.
+#  => Suman is designed to be 'better all-around' than AVA, TapJS and Mocha, etc.
 
 ---
 
 ## Quick feature list:
-
 
 
 <p>
@@ -39,47 +38,42 @@ Can handle any language, because it runs tests as child processes.
 <div> ✓ execute tests written in <b style="color:purple">any</b> language, use write TAP to stdout</div>
 <div> ✓ only <b style="color:purple">18mbs </b> on filesystem as npm install -D</div>
 <div> ✓ works with <b style="color:purple"> Selenium </b> (use selenium-webdriver, wd, or webdriver.io)</div>
+<div> ✓ Complete control => Everything in Suman is parallelizable, but you *can* run unit tests all in the same process for speed, as needed. </div>
 
 </p>
+
+
+For more detailed feature explanations, see below.
 
 
 ---
 
 
-## &#9658; Documentation
+# &#9658; <ul> Documentation </ul>
 
  >   Suman documentation => [sumanjs.org](http://sumanjs.github.io "Suman Docs")  
 
  ---
 
-#  Suman is a singular test runner focused on Node.js, but is generic and robust so that it is also language agnostic
+##  Suman is a singular test runner focused on Node.js and front-end JavaScript, 
+## but is both generic and robust so that it can run tests in any runtime or language
 
 Suman is written with Node.js, and is focused testing Node.js code, 
 but can run tests written in any language, not just JavaScript. This is 
-because it can run tests in child processes and collect results using TAP (Test Anything Protocol).
+because it can run tests in child processes and collect results using TAP (Test Anything Protocol, via stdout), IPC, or websockets.
+
 Suman can run a test in any language which exposes a script with a hashbang or a binary entrypoint file (e.g. Golang or C).
 To run Java tests, where Java does not compile to binary and where you cannot put a hashbang in a .class file,
 you would need to call Java from a shell script.
 
 It is designed for maximum test performance, via careful parallelization at
 every juncture in the testing process/pipeline. 
- 
-## If your team is interested in speeding up your testing cycle, Suman is the absolute right place to look for answers.
 
 
-# Some Math
+# A simple mathematical equation:
+
 ##  Suman = ( AVA + Mocha + Lab )
 
-
-Suman uses several intelligent pieces of setup:
-
-Global installations of Suman simply look for local installations to run. This prevents any potential 
-conflicts if there is a difference between the global/local module versions.
-
-If you use NVM and switch between Node.js versions, you can use a bash script (provided by SumanJS) which will 
-denecessitate the need for any global installations of Suman at all.
-
-Suman is designed to interop well with the most common libraries in the ecosystem for handling asynchronous code.
 
 ---
 
@@ -138,11 +132,14 @@ If you wish to avoid global NPM module installations, we commend you, see:
 I started writing Suman in October 2015. After 6 months of working with Mocha, I started seeing many of its shortcomings.
  Mocha has a handful of major problems and 100 minor ones. Mocha is poorly designed software, and the fact that it concatenates
  all your tests in a single process is simply not how testing should work; especially for a dynamic language where the global
- scope can be easily polluted by inexperienced developers.
+ scope can be easily polluted by inexperienced developers. Once you start writing non-trivial tests with Mocha, it becomes 
+ very difficult to debug tests and run only one test at a time. 
  
 About 2 weeks after I started writing Suman, I discovered AVA. AVA is much better than Mocha, but it "forces" you to use transpilation
-and has its own assertion library. It's also missing some nice features from Mocha. So I decided to continue working on Suman, and essentially
-take the best from Mocha and AVA, and also borrow the best ideas from TapJS/Tape and Lab (the test runner for the Hapi framework.).
+and has its own assertion library. It's also missing some nice features from Mocha, including nested blocks. 
+So I decided to continue working on Suman, and essentially take the best from Mocha and AVA, 
+and also borrow the best ideas from TapJS/Tape and Lab (the test runner for the Hapi framework.). I have spent a lot of time
+on the issue trackers on basically every Node.js testing framework :)
 
 Just like AVA, Suman runs tests in child processes. With Suman, you can also run any single test with just the node executable,
 something that you cannot do with AVA. A big hangup for me. Beyond the standard advantages of speed, isolation and independence, running tests
@@ -158,6 +155,15 @@ Over time, better and better support for incremental transpilation/compilation w
 
 
 
+### Suman uses several intelligent pieces of setup:
+
+Global installations of Suman simply look for local installations to run. This prevents any potential 
+conflicts if there is a difference between the global/local module versions.
+
+If you use NVM and switch between Node.js versions, you can use a bash script (provided by SumanJS) which will 
+denecessitate the need for any global installations of Suman at all.
+
+Suman is designed to interop well with the most common libraries in the ecosystem for handling asynchronous code.
 
 
 ## Simple example
@@ -167,14 +173,14 @@ Over time, better and better support for incremental transpilation/compilation w
 import * as suman from 'suman';
 const Test = suman.init(module)
 
-Test.create('example', (baz, assert, http, beforeEach, describe) => {  
+Test.create('example', (baz, assert, http, beforeEach, describe, inject, foo) => {  
 
     // Suman uses simple old-school style JavaScript DI
     // we have injected some core modules by name (http, assert, path) 
     // we have also injected a module from our own project, baz
     
      inject('bar', () => {
-         return baz().then(v => {
+         return baz(foo).then(v => {
             return v.filter(val => val.isGreen())
          })
      })
