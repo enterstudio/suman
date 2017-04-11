@@ -22,6 +22,8 @@ Can handle any language, because it runs tests as child processes.
 
 ## Quick Feature List:
 
+```console
+
 ✓ test isolation => by default, each test runs in its own process
 ✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)
 ✓ declarative style - declare (sync and async) dependencies for each test, and only load those
@@ -34,6 +36,10 @@ Can handle any language, because it runs tests as child processes.
 ✓ execute tests written in any language, use write TAP to stdout
 ✓ only 18mbs on filesystem as npm install -D
 ✓ works with Selenium (use selenium-webdriver, wd, or webdriver.io)
+
+
+```
+
 
 
 
