@@ -27,18 +27,18 @@ Can handle any language, because it runs tests as child processes.
 
 <p>
 
-<div> <b style="color:purple"> ✓ test isolation => </b> by default, each test runs in its own process </div>
-<div> <b style="color:purple"> ✓ test independence => </b>  easily run only one test at a time (unlike other Node.js test runners...)</div>
-<div> <b style="color:purple"> ✓ declarative style </b>  - declare (sync and async) dependencies for each test, and only load those</div>
-<div> ✓ "nodeable test scripts" => run individual tests with the node.js executable</div>
-<div> ✓ no global variables as part of test harness</div>
-<div> ✓ supports unit testing in the browser (tested on Chrome and Firefox)</div>
-<div> ✓ supports observables (RxJS5)</div>
-<div> ✓ synchronous *and* asynchronous reporters (!)</div>
-<div> ✓ tests run in parallel in separate processes</div>
-<div> ✓ execute tests written in any language, use write TAP to stdout</div>
-<div> ✓ only 18mbs on filesystem as npm install -D</div>
-<div> ✓ works with Selenium (use selenium-webdriver, wd, or webdriver.io)</div>
+<div> ✓ <b style="color:purple">  test isolation => </b> by default, each test runs in its own process </div>
+<div> ✓ <b style="color:purple">  test independence => </b>  easily run only one test at a time (unlike other Node.js test runners...)</div>
+<div> ✓ <b style="color:purple">  declarative style </b>  - declare (sync and async) dependencies for each test, and only load those</div>
+<div> ✓ <b style="color:purple"> "nodeable test scripts" </b> => run individual tests with the node.js executable</div>
+<div> ✓ <b style="color:purple"> no global variables </b> as part of test harness</div>
+<div> ✓ <b style="color:purple"> supports unit testing in the browser (tested on Chrome and Firefox)</div>
+<div> ✓ <b style="color:purple"> supports observables (RxJS5)</div>
+<div> ✓ synchronous <b style="color:purple">*and*</b> asynchronous reporters (!)</div>
+<div> ✓ <b style="color:purple"> tests run in parallel in separate processes</div>
+<div> ✓ execute tests written in <b style="color:purple">any</b> language, use write TAP to stdout</div>
+<div> ✓ only <b style="color:purple">18mbs </b> on filesystem as npm install -D</div>
+<div> ✓ works with <b style="color:purple"> Selenium </b> (use selenium-webdriver, wd, or webdriver.io)</div>
 
 </p>
 
