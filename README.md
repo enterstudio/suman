@@ -13,7 +13,28 @@
 
 Designed to run tests written in any language - just write TAP to stdout. 
 Intended to work with Selenium, in the browser, and to do large-scale backend system and integration testing.  
+
 Can handle any language, because it runs tests as child processes. 
+
+
+#  => Suman is designed to be 'better all-around' than AVA, TapJS and Mocha
+
+
+## Quick Feature List:
+
+✓ test isolation => by default, each test runs in its own process
+✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)
+✓ declarative style - declare (sync and async) dependencies for each test, and only load those
+✓ "nodeable test scripts" => run individual tests with the node.js executable
+✓ no global variables as part of test harness
+✓ supports unit testing in the browser (tested on Chrome and Firefox)
+✓ supports observables (RxJS5)
+✓ synchronous *and* asynchronous reporters (!)
+✓ tests run in parallel in separate processes
+✓ execute tests written in any language, use write TAP to stdout
+✓ only 18mbs on filesystem as npm install -D
+✓ works with Selenium (use selenium-webdriver, wd, or webdriver.io)
+
 
 
 ## &#9658; Documentation
@@ -37,9 +58,9 @@ every juncture in the testing process/pipeline.
 ## If your team is interested in speeding up your testing cycle, Suman is the absolute right place to look for answers.
 
 
-
+# Some Math
 ##  Suman = ( AVA + Mocha + Lab )
-###  It is primarily designed to supercede Mocha, and rival AVA
+
 
 Suman uses several intelligent pieces of setup:
 
@@ -76,17 +97,17 @@ ___
 
 # &#9658; Installation
 
-<i> => For command line tools:</i>
+<i> For command line tools:</i>
 ## ```$ npm install -g suman```
 
 => **Please** do *not* use sudo to install suman globally; if you need to use sudo, then something is probably wrong
 => See: https://docs.npmjs.com/getting-started/fixing-npm-permissions
 => To avoid any problems with permissions, Suman recommends usage of NVM
 
-<i> => For test suites in your project:</i>
+<i> For test suites in your project:</i>
 ## ```$ cd <your-project-root> && suman --init```
 
-* for an advanced installation method (to avoid global NPM modules) see: "Local installations only"
+* To avoid global NPM modules see: "Local installations only"
 
 => to convert a Mocha test or whole directory(s) of Mocha tests to Suman tests use <br>
 ### ```$ suman --convert --src=<src-file/src-dir> --dest=<dest-dir>```
@@ -105,10 +126,10 @@ If you wish to avoid global NPM module installations, we commend you, see:
 
 ## The Suman Story
 
-I started writing Suman in October 2015. After 6 months of working with Mocha, I was becoming very disenchanted
- - Mocha had a handful of major problems and 100 minor ones. Mocha is poorly designed software, and the fact that it concatenates
- all your tests in a single process is simply not how testing should work; especially for dynamic language where the global
- scope can be polluted by inexperienced developers.
+I started writing Suman in October 2015. After 6 months of working with Mocha, I started seeing many of its shortcomings.
+ Mocha has a handful of major problems and 100 minor ones. Mocha is poorly designed software, and the fact that it concatenates
+ all your tests in a single process is simply not how testing should work; especially for a dynamic language where the global
+ scope can be easily polluted by inexperienced developers.
  
 About 2 weeks after I started writing Suman, I discovered AVA. AVA is much better than Mocha, but it "forces" you to use transpilation
 and has its own assertion library. It's also missing some nice features from Mocha. So I decided to continue working on Suman, and essentially
