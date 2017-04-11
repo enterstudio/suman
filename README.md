@@ -19,26 +19,33 @@ Can handle any language, because it runs tests as child processes.
 
 #  => Suman is designed to be 'better all-around' than AVA, TapJS and Mocha
 
+---
 
-## Quick Feature List:
+## Quick feature list:
 
 
-<h3 style="text-align:left;">
+
+
+
+<h4 style="color:purple">
+
 <div> ✓ test isolation => by default, each test runs in its own process </div>
-<div> ✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)</div>
-<div> ✓ declarative style - declare (sync and async) dependencies for each test, and only load those</div>
-<div> ✓ "nodeable test scripts" => run individual tests with the node.js executable</div>
-<div> ✓ no global variables as part of test harness</div>
-<div> ✓ supports unit testing in the browser (tested on Chrome and Firefox)</div>
-<div> ✓ supports observables (RxJS5)</div>
-<div> ✓ synchronous *and* asynchronous reporters (!)</div>
-<div> ✓ tests run in parallel in separate processes</div>
-<div> ✓ execute tests written in any language, use write TAP to stdout</div>
-<div> ✓ only 18mbs on filesystem as npm install -D</div>
-<div> ✓ works with Selenium (use selenium-webdriver, wd, or webdriver.io)</div>
-</h1>
+<div>✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)</div>
+<div>✓ declarative style - declare (sync and async) dependencies for each test, and only load those</div>
+<div>✓ "nodeable test scripts" => run individual tests with the node.js executable</div>
+<div>✓ no global variables as part of test harness</div>
+<div>✓ supports unit testing in the browser (tested on Chrome and Firefox)</div>
+<div>✓ supports observables (RxJS5)</div>
+<div>✓ synchronous *and* asynchronous reporters (!)</div>
+<div>✓ tests run in parallel in separate processes</div>
+<div>✓ execute tests written in any language, use write TAP to stdout</div>
+<div>✓ only 18mbs on filesystem as npm install -D</div>
+<div>✓ works with Selenium (use selenium-webdriver, wd, or webdriver.io)</div>
+
+</h4>
 
 
+---
 
 
 ## &#9658; Documentation
