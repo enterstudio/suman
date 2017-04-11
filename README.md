@@ -23,7 +23,7 @@ Can handle any language, because it runs tests as child processes.
 ## Quick Feature List:
 
 
-<h1 style="text-align:center;">
+<h3 style="text-align:left;">
 <div> ✓ test isolation => by default, each test runs in its own process </div>
 <div> ✓ test independence => easily run only one test at a time (unlike other Node.js test runners...)</div>
 <div> ✓ declarative style - declare (sync and async) dependencies for each test, and only load those</div>
