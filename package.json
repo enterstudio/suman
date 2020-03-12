@@ -49,7 +49,7 @@
     "lodash.uniq": "^4.5.0",
     "lodash.uniqby": "^4.7.0",
     "make-beep": "0.0.1",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "pragmatik": "latest",
     "progress": "^2.0.0",
     "request": "^2.79.0",
