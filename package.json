@@ -59,7 +59,7 @@
     "semver": "^5.3.0",
     "siamese": "latest",
     "socket.io": "^1.7.3",
-    "socket.io-client": "^1.4.3",
+    "socket.io-client": "^2.4.0",
     "suman-debug": "latest",
     "suman-events": "latest",
     "suman-example-reporter": "latest",
