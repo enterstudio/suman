@@ -56,7 +56,7 @@
     "require-from-string": "^1.1.0",
     "residence": "latest",
     "rimraf": "^2.5.4",
-    "semver": "^5.3.0",
+    "semver": "^7.5.2",
     "siamese": "latest",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.4.3",
