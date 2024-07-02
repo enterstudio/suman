@@ -35,7 +35,7 @@
     "chmodr": "^1.0.2",
     "colors": "^1.1.2",
     "dashdash": "^1.14.0",
-    "du": "^0.1.0",
+    "du": "^1.0.0",
     "function-arguments": "^1.0.4",
     "lockfile": "^1.0.3",
     "lodash.flatten": "^4.4.0",
